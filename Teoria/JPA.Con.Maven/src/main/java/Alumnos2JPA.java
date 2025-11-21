@@ -3,27 +3,32 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-public class Prueba1JPA {
+import java.util.List;
+
+public class Alumnos2JPA { 
 
 	public static void main(String[] args) {
 
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("UnidadPersonas");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("UnidadAlumnos");
 		EntityManager em = emf.createEntityManager();
-
-		Persona yo = new Persona("Pedro", 25);
 
 		try {
 			em.getTransaction().begin();
-			em.persist(yo);
+
+			// Consulta JPQL moderna
+			List<Alumno> alumno = em.createQuery("SELECT a FROM Alumno a", Alumno.class).getResultList();
+
+			for (Alumno a : alumno) {
+				System.out.println("DNI: " + a.getDNI() + "Nombre: " + a.getNombre() + "Apellidos: " + a.getApellidos() + ", CP: " + a.getCP());
+			}
+
 			em.getTransaction().commit();
-			System.out.println("Todo ha ido bien");
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			if (em.getTransaction().isActive()) {
 				em.getTransaction().rollback();
 			}
-			System.err.println("Ha sido un desastre");
-
 		} finally {
 			em.close();
 			emf.close();

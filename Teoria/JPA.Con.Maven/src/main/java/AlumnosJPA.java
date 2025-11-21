@@ -3,14 +3,14 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-public class Prueba1JPA {
+public class AlumnosJPA {
 
 	public static void main(String[] args) {
 
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("UnidadPersonas");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("UnidadAlumnos");
 		EntityManager em = emf.createEntityManager();
 
-		Persona yo = new Persona("Pedro", 25);
+		Alumno yo = new Alumno("11111222H", "Luis", "Nano", 12659);
 
 		try {
 			em.getTransaction().begin();
