@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 14 dic 2025, 16:25:19 by Hibernate Tools 6.5.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="scott" name="database.Dept2" optimistic-lock="none" table="dept2">
+        <id name="deptno2" type="int">
+            <column name="deptno2"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="dname2" type="string">
+            <column length="20" name="dname2" not-null="true"/>
+        </property>
+        <property name="loc2" type="string">
+            <column length="20" name="loc2"/>
+        </property>
+    </class>
+</hibernate-mapping>

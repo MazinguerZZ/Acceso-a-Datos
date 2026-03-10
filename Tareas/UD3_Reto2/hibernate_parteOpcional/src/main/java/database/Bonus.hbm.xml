@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 14 dic 2025, 16:25:19 by Hibernate Tools 6.5.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="scott" name="database.Bonus" optimistic-lock="none" table="bonus">
+        <composite-id class="database.BonusId" name="id">
+            <key-property name="comm" type="java.lang.Integer">
+                <column name="COMM"/>
+            </key-property>
+            <key-property name="ename" type="string">
+                <column length="10" name="ENAME"/>
+            </key-property>
+            <key-property name="job" type="string">
+                <column length="9" name="JOB"/>
+            </key-property>
+            <key-property name="sal" type="java.lang.Integer">
+                <column name="SAL"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
