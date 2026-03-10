@@ -1,0 +1,26 @@
+Análisis de Resultados del Simulador de Banco
+
+Configuración 1: RETIRA_EN_DOS_PASOS = false, TRANSACCIÓN = false
+Descuadres temporales: Ocasionales - la retirada atómica previene descuadres permanentes pero pueden verse estados intermedios.
+Descubiertos en cuentas: No se producen - la condición saldo>=? en el UPDATE evita sobregiros.
+Interbloqueos en BD: Mínimos - cada operación independiente reduce conflictos de locking.
+
+Configuración 2: RETIRA_EN_DOS_PASOS = true, TRANSACCIÓN = false
+Descuadres temporales: Frecuentes - la ventana entre consulta y retirada permite ver estados inconsistentes.
+Descubiertos en cuentas: Muy probables - race conditions permiten retirar más del saldo disponible.
+Interbloqueos en BD: Poco probables - al no usar transacciones, no se mantienen múltiples locks simultáneamente.
+
+Configuración 3: RETIRA_EN_DOS_PASOS = false, TRANSACCIÓN = true
+Descuadres temporales: No ocurren - las transacciones aseguran aislamiento.
+Descubiertos en cuentas: No ocurren - la verificación atómica dentro de la transacción lo impide.
+Interbloqueos en BD: Probables - el orden consistente de operaciones puede crear deadlocks en concurrencia alta.
+
+Configuración 4: RETIRA_EN_DOS_PASOS = true, TRANSACCIÓN = true, REORDENA_QUERIES = false
+Descuadres temporales: No ocurren - las transacciones mantienen la consistencia.
+Descubiertos en cuentas: No ocurren - a pesar del dos pasos, la transacción protege la atomicidad.
+Interbloqueos en BD: Moderados - el orden predecible reduce pero no elimina deadlocks.
+
+Configuración 5: RETIRA_EN_DOS_PASOS = true, TRANSACCIÓN = true, REORDENA_QUERIES = true
+Descuadres temporales: No ocurren - garantizado por las transacciones.
+Descubiertos en cuentas: No ocurren - la atomicidad transaccional previene sobregiros.
+Interbloqueos en BD: Muy frecuentes - el orden aleatorio de queries maximiza las esperas circulares.
