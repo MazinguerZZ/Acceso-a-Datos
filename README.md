@@ -1,3 +1,6 @@
 # Acceso a Datos
 
-Aqui subo mis tareas de acceso a datos
+Aqui subire todo lo que este relacionado con la asignatura de Acceso a Datos:
+Tareas, 
+Proyectos, 
+y muchas mas cosas.
