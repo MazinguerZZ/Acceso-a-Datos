@@ -1,0 +1,9 @@
+Referencias UD2
+
+https://www.arquitecturajava.com/jdbc-prepared-statement-y-su-manejo/
+
+
+ClassForName no necesario desde JDBC 4: https://stackoverflow.com/questions/39116196/why-need-for-using-jdbc-write-class-forname-for-each-connection
+
+
+http://www.programandoapasitos.com/2016/07/java-y-mysql-patron-singleton.html
