@@ -1,0 +1,68 @@
+Referencias
+
+MongoDB (más abajo más)
+
+https://spring.io/guides/gs/accessing-data-mongodb
+
+https://spring.io/guides/gs/accessing-mongodb-data-rest
+
+https://datos.codeandcoke.com/apuntes:mongodb
+
+https://www.mongodb.com/
+
+https://www.mongodb.com/docs/manual/
+
+https://www.baeldung.com/spring-data-mongodb-tutorial
+
+https://blog.findemor.es/2015/06/aprender-a-usar-mongodb-guia-1/
+
+
+OTRAS NO-SQL:
+
+https://spring.io/guides/gs/accessing-data-neo4j
+Jakarta JNoSQL: https://www.jnosql.org/
+https://www.baeldung.com/spring-data-neo4j-intro , https://neo4j.com/product/auradb/
+https://www.baeldung.com/spring-data-redis-tutorial
+https://cassandra.apache.org/_/index.html
+https://redis.io/
+https://www.oracle.com/es/database/nosql/
+https://hbase.apache.org/
+https://ravendb.net/
+https://couchdb.apache.org/
+
+
+En la nube:
+
+https://firebase.google.com/?hl=es , https://medium.com/techwasti/spring-boot-firebase-crud-b0afab27b26e
+https://aws.amazon.com/es/dynamodb/
+https://aws.amazon.com/es/simpledb/
+https://cloud.google.com/bigtable?hl=es
+https://hypertable.com/
+
+
+XML:
+
+http://exist-db.org/exist/apps/homepage/index.html
+https://basex.org/
+https://www.educa2.madrid.org/web/amadeo.mora/basex
+https://www.educa2.madrid.org/web/amadeo.mora/basex-ejercicios
+
+
+Más MongoDB:
+
+https://www.mongodb.com/es/docs/manual/
+https://docs.mongodb.com/manual/indexes/
+http://blog.findemor.es/2015/06/aprender-a-usar-mongodb-guia-1/
+https://json-schema.org/understanding-json-schema/
+
+Índices:
+	http://blog.findemor.es/2015/06/aprender-a-usar-mongodb-guia-6/
+	https://docs.mongodb.com/manual/geospatial-queries/
+https://docs.spring.io/spring-data/mongodb/docs/current-SNAPSHOT/reference/html/#mongodb.repositories.queries
+https://www.baeldung.com/spring-data-mongodb-projections-aggregations
+https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/#mongo.geo-json
+https://www.alessandrorosa.com/geojson-serialization-issues-with-spring-data-mongodb/
+https://mongodb.github.io/mongo-java-driver/3.12/driver/getting-started/quick-start/
+https://mongodb.github.io/mongo-java-driver/3.12/driver/getting-started/quick-start-pojo/
+https://www.guru99.com/top-20-mongodb-tools.html
+https://docs.spring.io/spring-data/mongodb/docs/current-SNAPSHOT/reference/html/#mongodb.repositories.queries
