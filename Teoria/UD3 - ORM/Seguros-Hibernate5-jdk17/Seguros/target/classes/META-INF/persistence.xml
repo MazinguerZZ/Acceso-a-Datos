@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Seguros"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>com.amanecer.seguros.modelo.Asistencia</class>
+		<class>com.amanecer.seguros.modelo.Cobertura</class>
+		<class>com.amanecer.seguros.modelo.Enfermedad</class>
+		<class>com.amanecer.seguros.modelo.Seguro</class>
+		<properties>
+		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+ 		<property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver" />
+ 		<property name="jakarta.persistence.jdbc.user" value="dam2" />
+ 		<property name="jakarta.persistence.jdbc.password" value="asdf.1234" />
+ 		<property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://localhost/adat2?allowPublicKeyRetrieval=true" />
+ 		<property name="jakarta.persistence.schema-generation.database.action" value="none" />
+		
+		<!-- 
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="jakarta.persistence.schema-generation.database.action" value="none" />
+			-->
+		</properties>
+	</persistence-unit>
+</persistence>

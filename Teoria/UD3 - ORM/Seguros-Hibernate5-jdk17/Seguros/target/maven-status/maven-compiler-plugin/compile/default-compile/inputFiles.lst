@@ -1,0 +1,14 @@
+/home/javi/eclipse-workspace-2024-2025/Seguros/src/main/java/com/amanecer/seguros/App.java
+/home/javi/eclipse-workspace-2024-2025/Seguros/src/main/java/com/amanecer/seguros/controlador/AsistenciaControlador.java
+/home/javi/eclipse-workspace-2024-2025/Seguros/src/main/java/com/amanecer/seguros/controlador/SeguroControlador.java
+/home/javi/eclipse-workspace-2024-2025/Seguros/src/main/java/com/amanecer/seguros/modelo/Asistencia.java
+/home/javi/eclipse-workspace-2024-2025/Seguros/src/main/java/com/amanecer/seguros/modelo/Cobertura.java
+/home/javi/eclipse-workspace-2024-2025/Seguros/src/main/java/com/amanecer/seguros/modelo/Enfermedad.java
+/home/javi/eclipse-workspace-2024-2025/Seguros/src/main/java/com/amanecer/seguros/modelo/Seguro.java
+/home/javi/eclipse-workspace-2024-2025/Seguros/src/main/java/com/amanecer/seguros/persistencia/AsistenciaDAO.java
+/home/javi/eclipse-workspace-2024-2025/Seguros/src/main/java/com/amanecer/seguros/persistencia/AsistenciaDAOImpl.java
+/home/javi/eclipse-workspace-2024-2025/Seguros/src/main/java/com/amanecer/seguros/persistencia/GenericDAO.java
+/home/javi/eclipse-workspace-2024-2025/Seguros/src/main/java/com/amanecer/seguros/persistencia/GenericDAOImpl.java
+/home/javi/eclipse-workspace-2024-2025/Seguros/src/main/java/com/amanecer/seguros/persistencia/SeguroDAO.java
+/home/javi/eclipse-workspace-2024-2025/Seguros/src/main/java/com/amanecer/seguros/persistencia/SeguroDAOImpl.java
+/home/javi/eclipse-workspace-2024-2025/Seguros/src/main/java/com/amanecer/seguros/persistencia/Utilidades.java

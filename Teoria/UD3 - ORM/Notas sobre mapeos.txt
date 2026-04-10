@@ -1,0 +1,18 @@
+Notas sobre mapeos
+
+
+Respecto a doc 1:N
+
+- Ya no es necesario implementar Serializable (y por lo tanto tampoco poner el serialId) No hace daño (lo hace automáticamente) pero no es necesario. Ni en relaciones 1:N ni en N:N ni en @Entity en general.
+
+- Son optativos @Table, @Column y @JoinColumn, pueden no ponerse y entonces usa nombres basados en los atributos o nombre de clase.
+
+- Usamos mappedBy con el nombre que tiene en la otra entidad la referencia a la nuestra. Se podría omitir si usamos nombre estándar (el de clase en minúsculas) pero entonces crea una tabla extra para la relación.
+
+- List en vez de Set si queremos ordenación en nuestro código.
+
+- Cascade no es solo para borrados: inserciones, modificaciones. Si no lo ponemos nos obliga a gestionar nosotros el insertar entidad poseída en repositorios antes de la poseedora, borrados, etc.
+
+
+
+Autowired necesario cuando están en paquetes distintos, eso sí, los paquetes siempre colgando del principal. Mejor práctica es poner el constructor recibiendo el repositorio.

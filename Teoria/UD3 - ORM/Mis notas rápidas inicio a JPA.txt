@@ -1,0 +1,40 @@
+Mis notas rápidas inicio a JPA
+
+
+JPA – Java Persistence Library , API estándard de Java para persistencia de objetos. Es una especificación pero luego hay varias implementaciones, la implementación de referencia es EclipseLink pero hay muchos otros frameworks que la implementan, el más conocido es Hibernate. Antiguamente estaba en J2EE en el paquete javax, ahora está por separado en el paquete jakarta.
+
+Vale tanto para bases de datos relacionales como orientadas a objeto.
+
+Trata de resolver el desfase objeto – relacional.
+
+Mapeo transparente del CRUD mediante anotaciones y metadatos, también consultas tipo SQL pero con objetos mediante JPQL (Hibernate tiene otro)
+
+En un proyecto a parte del driver de JDBC de la base de datos concrea hay que añadir los jars de JPA, bien a mano o mediante Maven.
+
+
+
+Archivo META-INFO/persistence.xml para definir las unidades de persistencia, listar ahí todas las clases que estarán bajo JPA. Provider, classes, config … Estrategia: crear, + drop, update ...
+
+
+
+ENTIDADES: POJOs con constructor explícito, serializables, @Entity, @Id …
+
+@GenerateValue
+
+
+
+Se crea un EntityManager a partir de un EntityManagerFactory, tiene métodos clear, contains, detach, flush, merge … getTransaction con su begin y commit y luego para el CRUD persist, find, merge y remove.
+
+
+
+Evolución, patrones DAO y Repository.
+
+JDBC → cada clase modelo con sus métodos save y read o equivalentes para la psersistencia.
+
+DAO → clases modelo sin cambios y luego otras clases del DAO que implementan su persistencia.
+
+Valores para jakarta.persistence.schema-generation.database.action
+
+https://docs.oracle.com/javaee/7/tutorial/persistence-intro005.htm
+
+parece que no tienen que ver con spring.jpa.hibernate.ddl-auto y solo permite: none , create, drop-and-create y drop

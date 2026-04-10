@@ -1,0 +1,16 @@
+Rompienzo el hielo con JPQL
+
+
+1. Listado de todas las entidades de una tabla seleccionando solo algunos campos.
+
+2. Listado filtrado por algún criterio (WHERE)
+
+3. Listados ordenados por algún criterio.
+
+4. Búsqueda de elementos por criterios exactos y aproximados.
+
+5. Listado de elementos que cumplen que un determinado campo numérico esté en un rango determinado.
+
+6. Obtención de sumas, medias, número de registros que cumplen un criterio
+
+7. Algún join.

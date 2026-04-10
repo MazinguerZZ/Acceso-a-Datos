@@ -1,0 +1,117 @@
+Referencias
+
+
+JPA:
+
+- solo enlaces: https://es.wikipedia.org/wiki/Java_Persistence_API
+- algo mejor: https://en.wikipedia.org/wiki/Jakarta_Persistence
+- https://www.oscarblancarteblog.com/tutoriales/java-persistence-api-jpa/
+- Buena intro: https://www.campusmvp.es/recursos/post/la-api-de-persistencia-de-java-que-es-jpa-jpa-vs-hibernate-vs-eclipselink-vs-spring-jpa.aspx
+- https://keepcoding.io/blog/que-es-jpa-o-java-persistence-api/
+- https://www.arquitecturajava.com/jpa-un-ejemplo-desde-cero/
+- https://www.arquitecturajava.com/jpa-vs-hibernate/
+- https://hibernate.org/
+- https://www.baeldung.com/learn-jpa-hibernate
+- https://thorben-janssen.com/difference-jpa-hibernate-eclipselink/
+- https://www.baeldung.com/jpa-hibernate-difference
+
+- findAll con EntityManager:
+
+	- Implementación de Repository con EntityManager: https://jakarta.ee/learn/starter-guides/how-to-	store-and-retrieve-data-using-jakarta-persistence/ → em.createQuery("SELECT c FROM Coffee c", 	Coffee.class).getResultList()
+
+	- https://stackoverflow.com/questions/34881292/how-to-find-all-managed-attached-objects-in-	entitymanager-jpa
+
+	- FindAll antipattern: https://vladmihalcea.com/spring-data-findall-anti-pattern/
+
+- EntityManager vs. Repository: https://medium.com/@mgm06bm/jparepository-and-entitymanager-in-spring-data-jpa-e12daad579a7
+
+
+Patrones de diseño:
+
+- https://refactoring.guru/design-patterns
+- https://www.digitalocean.com/community/tutorials/gangs-of-four-gof-design-patterns
+
+
+
+DAO:
+
+- https://en.wikipedia.org/wiki/Data_access_object
+
+- https://reactiveprogramming.io/blog/es/patrones-arquitectonicos/dao
+
+- https://www.oscarblancarteblog.com/2018/12/10/data-access-object-dao-pattern/ más complejo, introduce DTO pero no queda muy claro.
+
+- vs. Repository: https://www.arquitecturajava.com/dao-vs-repository-y-sus-diferencias/
+
+
+
+Implentaciones:
+
+- https://www.infoworld.com/article/2259807/what-is-jpa-introduction-to-the-java-persistence-api.html
+→ apartado instalación con Maven
+
+
+- Descarga EclipseLink: https://eclipse.dev/eclipselink/#download
+
+
+
+EclipseLink misc:
+
+https://eclipse.dev/eclipselink/#documentation
+
+https://eclipse.dev/eclipselink/documentation/
+
+Install: https://eclipse.dev/eclipselink/documentation/3.0/solutions/install.htm
+
+https://eclipse.dev/eclipselink/documentation/3.0/solutions/install002.htm#CHDFDCDC
+
+old (javax): https://dzone.com/refcardz/eclipselink-jpa
+
+Maven: https://wiki.eclipse.org/EclipseLink/Maven
+
+https://wiki.eclipse.org/EclipseLink/FAQ/JPA/
+
+https://wiki.eclipse.org/EclipseLink/FAQ/General#How_do_I_get_started_using_EclipseLink.3F
+
+examples: https://wiki.eclipse.org/EclipseLink/Examples/
+
+
+
+JPQL:
+
+https://en.wikipedia.org/wiki/Jakarta_Persistence_Query_Language
+
+https://www.tutorialspoint.com/es/jpa/jpa_jpql.htm
+
+https://thorben-janssen.com/jpql/
+
+Funciones: https://certidevs.com/tutorial-hibernate-jpql-funciones
+
+
+
+
+¿HQL? no, usaremos JPQL por compatibilidad JPA.
+
+https://en.wikipedia.org/wiki/Hibernate_(framework)#Hibernate_Query_Language_(HQL)
+
+
+
+JPQL - HQL:
+
+https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/chapters/query/hql/HQL.html
+
+
+
+JPA Criteria:
+
+https://rubensa.wordpress.com/2016/06/10/tutorial-de-jpa-2-criteria-api/
+
+https://www.arquitecturajava.com/jpa-criteria-api-un-enfoque-diferente/
+
+https://www.tutorialspoint.com/es/jpa/jpa_criteria_api.htm
+
+https://www.baeldung.com/hibernate-criteria-queries
+
+https://www.geeksforgeeks.org/jpa-criteria-api/
+
+https://jakarta.ee/learn/docs/jakartaee-tutorial/current/persist/persistence-criteria/persistence-criteria.html

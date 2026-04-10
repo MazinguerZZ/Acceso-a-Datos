@@ -1,0 +1,158 @@
+Primeros pasos con JPA (EclipseLink) sin Maven/Gradle
+
+
+1.- Sin gestor de dependencias:
+
+Descargamos EclipseLink de https://eclipse.dev/eclipselink/#download  (formato zip)  Más adelante lo haremos con Maven
+
+- Vamos a usar solo estos tres jars en nuestro proyecto:
+
+- eclipselink.jar
+
+- jakarta.activation-api.jar
+
+- jakarta.persistence-api.jar
+
+- y el driver de mariadb/mysql
+
+
+Creamos carpeta META-INF en src y dentro un archivo persistence.xml basado en este tutorial: https://www.arquitecturajava.com/jpa-un-ejemplo-desde-cero/pero:
+
+- Cambiar todos los javax por jakarta (salvo que estemos en versión antigua)
+
+- Añadir la propiedad para que cree las tablas: <property name="jakarta.persistence.schema-generation.database.action" value="create" />
+
+- El nombre de la unidad y de nuestras entidades para ponerlas luego igual en el código.
+
+- Cambia las propiedades que definen la base de datos, usuario y contraseña a la que vayas a usar en tu máquina.
+
+
+Si te diera el error relacionado con clave RSA añade al url jdbc:mysql://localhost/adat1?allowPublicKeyRetrieval=true
+
+Copia el código Java del tutorial y adáptalo hasta que consigas que se cree una tabla y una tupla en la base de datos con un objeto de tipo Persona. Ojo: la clase Persona está en el enlace https://www.arquitecturajava.com/que-es-un-pojo-en-java/ PERO sin las anotaciones @Entity y @Id que te harán falta. Resuelto: https://www.arquitecturajava.com/jpa-entitymanager-metodos/
+
+
+
+2.- Con gestor de dependencias Maven:
+
+	1. Crear nuevo proyecto Maven dando a la opción de "skip archetype" 
+	2. Editado el archivo pom.xml para añadir las dependencias de EclipseLink y MariaDBClient (ver más abajo)
+		1. Tras ello dar a Run As -> Maven install: debería descargar las dependencias.
+		2. Clicar en forzar descarga del xsd para que Project no salga en rojo, aunque no influye.
+	3. Copiar los .java del proyecto anterior a src/main/java , ojo con el paquete
+	4. Copiar persistence.xml en carpeta META-INF en src/main/resources: actualizar si procede el paquete de la clase y el url del conector
+	5. Run as java application y ver si funciona.
+
+
+
+Las dependencias, las podéis buscar en Maven Central Repository (mvnrepository.com) o  con Maven -> add dependency añadirlas solo con Group Id, Artifact Id y versión.
+
+<dependencies>
+
+<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa -->
+
+<dependency>
+
+<groupId>org.eclipse.persistence</groupId>
+
+<artifactId>org.eclipse.persistence.jpa</artifactId>
+
+<version>4.0.8</version>
+
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
+
+<dependency>
+
+<groupId>org.mariadb.jdbc</groupId>
+
+<artifactId>mariadb-java-client</artifactId>
+
+<version>3.5.6</version>
+
+</dependency>
+
+</dependencies>
+
+
+
+--------------------------------------
+
+CONTINUACIÓN: HACER EL CRUD COMPLETO:
+
+--------------------------------------
+
+Operaciones sobre EntityManager: https://www.geeksforgeeks.org/jpa-crud/
+
+C -> persist
+
+R -> find
+
+U -> merge
+
+D -> remove
+
+otras: clear, contains, detach, flush ... https://www.arquitecturajava.com/jpa-entitymanager-metodos/ , https://wiki.eclipse.org/EclipseLink/Examples/JPA/EMAPI
+
+
+Para listar todos crear una query, ejemplo:
+
+em.createQuery("SELECT c FROM Coffee c",Coffee.class).getResultList();
+
+
+
+--------------------------------------
+
+CONTINUACIÓN: MAPEO SOBRE VARIAS TABLAS CON RELACIONES ENTRE ELLAS.
+
+--------------------------------------
+
+Cambios sobre los PDF de mapeos en las relaciones:
+
+- Ya no es necesario implementar Serializable (y por lo tanto tampoco poner el serialId) No hace daño (lo hace automáticamente) pero no es necesario.
+
+- Son optativos @Table, @Column y @JoinColumn, pueden no ponerse y entonces usa nombres basados en los atributos o nombre de clase. (ojo, EclipseLink e HIbernate usan nomenclatura distinta)
+
+- Usamos mappedBy con el nombre que tiene en la otra entidad la referencia a la nuestra. Se podría omitir si usamos nombre estándar (el de clase en minúsculas) pero entonces crea una tabla extra para la relación.
+
+- List en vez de Set si queremos ordenación en nuestro código.
+
+- Cascade no es solo para borrados: inserciones, modificaciones. Si no lo ponemos nos obliga a gestionar nosotros el insertar entidad poseída en repositorios antes de la poseedora, borrados, etc.
+
+- Autowired necesario cuando están en paquetes distintos, eso sí, los paquetes siempre colgando del principal. Mejor constructor recibiendo el repositorio.
+
+----------------------------------------------------------------------------------
+
+Persistence.xml: valores posibles para jakarta.persistence.schema-generation.database.action
+
+https://docs.oracle.com/javaee/7/tutorial/persistence-intro005.htm
+
+: none , create, drop-and-create y drop
+
+----------------------------------------------------
+
+Ver fichero mis-notas-jpa.odt
+
+findAll con EntityManager
+
+https://jakarta.ee/learn/starter-guides/how-to-store-and-retrieve-data-using-jakarta-persistence/ → em.createQuery("SELECT c FROM Coffee c", Coffee.class).getResultList()
+
+https://stackoverflow.com/questions/34881292/how-to-find-all-managed-attached-objects-in-entitymanager-jpa
+
+
+
+
+EntityManager vs. Repository: https://medium.com/@mgm06bm/jparepository-and-entitymanager-in-spring-data-jpa-e12daad579a7
+
+FindAll antipattern: https://vladmihalcea.com/spring-data-findall-anti-pattern/
+
+
+
+Warning:-You have specified multiple ids for the entity class [modelo.CountryLanguage] without specifying an @IdClass. By doing this you may lose the ability to find by identity, distributed cache support etc. Note: You may however use EntityManager find operations by passing a list of primary key fields. Else, you will have to use JPQL queries to read your entities. For other id options see @PrimaryKey
+
+https://stackoverflow.com/questions/41143913/sql-jpa-multiple-columns-as-primary-key
+
+¿https://www.baeldung.com/jpa-composite-primary-keys?
+
+JPL: https://thorben-janssen.com/difference-jpa-hibernate-eclipselink/
