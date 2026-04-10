@@ -1,0 +1,146 @@
+https://leanmind.es/es/blog/rest-api-en-spring-boot-el-viaje-desde-la-request-hasta-la-response
+
+
+
+Verbos (comandos) y códigos de HTTP:
+
+https://wizardzines.com/comics/request-methods-1/
+
+https://wizardzines.com/comics/request-methods-2/
+
+https://questions.wizardzines.com/http-status-codes
+
+
+Más de repaso de HTTP:
+
+https://wizardzines.com/comics/whats-http/
+
+https://wizardzines.com/comics/how-urls-work/
+
+https://wizardzines.com/comics/netcat/
+
+https://wizardzines.com/comics/anatomy-http-request/
+
+https://questions.wizardzines.com/http-request-headers
+
+https://wizardzines.com/comics/anatomy-http-response/
+
+https://wizardzines.com/comics/http-redirects/
+
+https://wizardzines.com/comics/http-exercises/
+
+https://wizardzines.com/comics/https/
+
+
+Principios REST: https://dosideas.com/noticias/java/332-principios-de-rest
+
+https://en.wikipedia.org/wiki/Representational_state_transfer
+
+a base URI, such as http://api.example.com/;
+
+standard HTTP methods (e.g., GET, POST, PUT, and DELETE);
+
+a media type that defines state transition data elements (e.g., Atom, microformats, application/vnd.collection+json,[14]: 91–99  etc.). The current representation tells the client how to compose requests for transitions to all the next available application states. This could be as simple as a URI or as complex as a Java applet.[15]
+
+
+Intro a REST: https://dosideas.com/noticias/java/332-principios-de-rest
+
+Métodos HTTP:
+
+https://restfulapi.net/http-methods/
+
+https://www.restapitutorial.com/lessons/httpmethods.html
+
+PATH vs. PUT: https://www.bbvanexttechnologies.com/blogs/como-utilizar-los-metodos-put-y-patch-en-el-diseno-de-tus-apis-restful/
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+
+
+
+
+El PDF del aula virtual, antiguo (todo ha evolucionado) pero muy bueno para entender REST, sus orígenes y motivaciones.
+
+
+
+
+APIs RESTful:
+
+https://www.vtiger.com/blog/overview-of-rest-apis/
+
+https://restfulapi.net/
+
+https://aws.amazon.com/es/what-is/restful-api/
+
+https://restfulapi.net/hateoas/
+
+https://github.com/joseluisgs/SpringBoot-Productos-REST-DAM-2021-2022
+
+https://github.com/joseluisgs/springboot-profesores-madrid-2022-2023/tree/main/05-SpringWeb
+
+
+
+Nomenclatura de los recursos en APIs REST:
+
+https://restfulapi.net/resource-naming/
+
+
+
+
+https://www.baeldung.com/rest-with-spring-series
+
+
+
+REST entre las demás arquitecturas de APIs: https://www.linkedin.com/posts/brijpandeyji_the-top-8-api-architectural-styles-for-2024-activity-7143677325098868737-tgnL/
+
+
+
+Json-server:
+
+https://desarrolloweb.com/articulos/crear-api-rest-json-server.html
+
+Problema de sintaxis por versión de Node.JS, recomiendo la opción 3 de https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04
+
+
+
+
+Consumo de API REST:
+
+https://www.baeldung.com/rest-template
+
+https://howtodoinjava.com/spring-boot2/resttemplate/spring-restful-client-resttemplate-example/
+
+https://www.knowledgefactory.net/2023/12/spring6-restclient-example.html
+
+https://digma.ai/blog/restclient-vs-webclient-vs-resttemplate/
+
+
+Vídeo:
+
+https://youtu.be/4vLxWqE94l4?si=kmFGxhUk2iyl3NDD
+
+
+
+Testing API Rest: https://github.com/joseluisgs/springboot-profesores-madrid-2022-2023/tree/main/07-Testing
+
+
+
+Alternativa a Postman: https://httpie.io/ , Thunderclient
+
+
+
+
+Imagen de descripción general en el aula virtual: https://www.linkedin.com/posts/alexxubyte_systemdesign-coding-interviewtips-activity-7150890664833011712-BLiO
+
+Seguridad: https://www.linkedin.com/posts/bytebytego_systemdesign-coding-interviewtips-activity-7146396630815055873-Nvz3/
+
+
+
+Libro: https://www.linkedin.com/posts/gkatziourasemmanouil_java-spring-grpc-activity-7142534827529961473-epmL/
+
+
+
+Autenticación y autorización
+
+https://www.itdo.com/blog/cual-es-el-mejor-metodo-de-autentificacion-en-un-api-rest/
+
+https://www.paradigmadigital.com/dev/oauth-2-0-equilibrio-y-usabilidad-en-la-securizacion-de-apis/
