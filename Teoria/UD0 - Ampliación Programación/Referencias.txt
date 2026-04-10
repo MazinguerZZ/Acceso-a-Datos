@@ -1,0 +1,83 @@
+Referencias
+
+
+Para empezar los dos pdf y ejercicios de Marcos Martínez Rus.
+
+Para continuar el pdf de expresiones lambda, resto de materiales y cursos de openwebinars.
+
+
+También estos tutoriales:
+
+Mini-introducción: https://www.oscarblancarteblog.com/2017/03/16/java-8-streams-2/
+
+Introducción: https://www.arquitecturajava.com/java-stream/
+
+https://www.adictosaltrabajo.com/tutoriales/expresiones-lambda-con-java-8/ 
+
+https://www.adictosaltrabajo.com/2016/06/23/uso-basico-de-java-8-stream-y-lambdas/
+
+https://www.adictosaltrabajo.com/2015/03/02/optional-java-8/
+
+Interesante: https://www.oracle.com/lad/technical-resources/articles/java/expresiones-lambda-api-stream-java.html (ojo a gazapos en el código, > en vez de -> , mala indentación ...)
+
+El más completo y avanzado: https://medium.com/@yonem9/estudiando-java-avanzado-java-8-qu%C3%A9-narices-es-eso-de-los-stream-c99d665c4ab6
+
+Pasar de Stream a collection: https://www.baeldung.com/java-return-stream-collection (mejor que .toArray() y luego Arrays.asList)
+
+
+En inglés:
+
+https://hackernoon.com/have-you-used-the-streams-api-in-java
+
+http://tutorials.jenkov.com/java-functional-programming/streams.html
+
+https://www.geeksforgeeks.org/stream-in-java/
+
+https://belief-driven-design.com/functional-programming-with-java-streams-190eda591a5/
+
+https://howtodoinjava.com/java/stream/java-streams-guide/
+
+
+
+Código:
+
+https://github.com/Baeldung/learn-java-streams/tree/module
+
+
+De la documentación oficial:
+
+https://docs.oracle.com/javase/tutorial/collections/streams/reduction.html
+
+https://docs.oracle.com/javase/tutorial/collections/streams/index.html
+
+https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html
+
+
+Vídeos:
+
+https://www.youtube.com/watch?v=bTu-fz1JmWQ
+
+https://www.youtube.com/watch?v=ltwlQKMn1hk
+
+https://youtu.be/5dscMs2hnDI
+
+https://youtu.be/H62Jfv1DJlU
+
+
+Analogía con SQL:
+
+https://dev.to/hectorw_tt/java-streams-vs-sql-when-to-use-which-and-why-9ek
+
+https://medium.com/@dinesharney/sql-like-operations-in-modern-java-using-streams-api-e97ed795fdd7
+
+
+Avanzados:
+
+https://www.baeldung.com/java-8-streams
+
+https://simplifydataprocessing.medium.com/java-or-sql-which-is-faster-for-data-operation-b7a7a47aa709
+
+https://hackernoon.com/a-deeper-look-into-method-references-in-java
+
+https://www.baeldung.com/stream-api-jdbc-resultset
+
