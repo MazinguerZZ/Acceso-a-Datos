@@ -1,0 +1,104 @@
+Referencias
+
+Xstream:
+
+https://www.tutorialspoint.com/xstream/xstream_quick_guide.htm desde cero con jars descargados y sin IDE
+https://x-stream.github.io/persistence-tutorial.html
+https://docs.oracle.com/en/database/oracle/oracle-database/23/xstrm/xstream-guide.pdf
+https://stackoverflow.com/questions/16065842/using-xstreams-xmlarraylist-and-filepersistencestrategy-how-can-i-control-the-n
+https://objectcomputing.com/resources/publications/sett/november-2009-basic-persistence-using-xstream
+https://github.com/x-stream/xstream/issues/262
+https://www.baeldung.com/xstream-serialize-object-to-xml
+https://x-stream.github.io/security.html
+http://x-stream.github.io/1.4.9/security.html
+Ejemplos Xstream: http://garabatoslinux.net/crear-xml-en-java-usando-xstream.html
+
+El ejemplo PersistenceFromXML no funciona. Para arreglarlo a PermissionStrategy hay que pasarle un xstream al que le hayamos dado el permiso oportuno. Ej:
+
+XStream xstream = new XStream(new DomDriver());
+
+xstream.addPermission(AnyTypePermission.ANY);
+
+PersistenceStrategy strategy = new FilePersistenceStrategy(new File("."),xstream);
+
+ y luego se quejará de que Autor no tiene un constructor vacío, pero eso ya lo sabéis arreglar vosotros ...
+
+
+
+JSON:
+
+https://jarroba.com/gson-json-java-ejemplos/
+https://github.com/google/gson/blob/master/UserGuide.md
+https://www.json.org/json-es.html
+https://www.baeldung.com/xstream-json-processing
+https://x-stream.github.io/json-tutorial.html
+Visualizador: https://github.com/AykutSarac/jsoncrack.com
+
+
+OPCIONAL:
+
+XPath:
+
+https://es.wikipedia.org/wiki/XPath
+https://howtodoinjava.com/java/xml/java-xpath-tutorial-example/
+https://web.archive.org/web/20190320152612fw_/http://geneura.ugr.es/~victor/cursillos/xml/XPath/index.html
+Con otra librería (Guava)  https://www.baeldung.com/java-xpath
+https://www.w3schools.com/xml/xpath_intro.asp
+https://stackoverflow.com/questions/689097/is-xpath-much-more-efficient-as-compared-to-dom-and-sax
+
+“SAX is a top-down parser and allows serial access to a XML document, and works well for read only access. DOM on the other hand is more robust - it reads the entire XML document into a tree, and is very efficient when you want to alter, add, remove data in that XML tree. XPath is useful when you only need a couple of values from the XML document, and you know where to find them (you know the path of the data, /root/item/challange/text).
+
+SAX: Time efficient when iterating through the document, gives a single pass for every iteration
+
+DOM: Flexible/performance, gives you more ways to work your data
+
+XPath: Time efficient when you only need to read a couple of values
+
+“
+
+
+Jsoup:
+
+https://jsoup.org/
+https://jarroba.com/scraping-java-jsoup-ejemplos/
+https://www.oracle.com/corporate/features/jsoup-html-parsing-library.html
+https://howtodoinjava.com/java/library/complete-jsoup-tutorial/
+https://www.javacodeexamples.com/jsoup-tutorial-with-examples/1628
+https://javarevisited.blogspot.com/2014/09/how-to-parse-html-file-in-java-jsoup-example.html#axzz6gdkjz6jy
+https://www.baeldung.com/java-with-jsoup
+https://www.scrapingbee.com/blog/java-parse-html-jsoup/
+Otros: https://java-source.net/open-source/html-parsers
+https://webscraping.ai/faq/jsoup/can-jsoup-be-used-to-parse-xml-documents
+https://proxiesapi.com/articles/the-ultimate-jsoup-cheatsheet-in-java
+
+
+XML con JAXB con EclipseLink: https://eclipse.dev/eclipselink/documentation/4.0/moxy/moxy.html
+
+
+
+Dom/xml:
+
+https://docs.oracle.com/javase/8/docs/api/index.html?javax/xml/parsers/package-summary.html
+
+
+Más eficiente SAX:
+
+https://docs.oracle.com/javase/tutorial/jaxp/sax/parsing.html
+
+
+https://www.baeldung.com/java-xml-libraries
+
+
+
+Ejemplos DOM:
+
+http://javiergarbedo.es/53-apuntes-java/xml/247-ejemplo-de-lectura-de-fichero-xml-usando-dom
+
+
+
+Ejemplos SAX:
+
+http://www.mkyong.com/java/how-to-read-xml-file-in-java-sax-parser/
+
+http://www.javacodegeeks.com/2012/01/xml-parsing-using-saxparser-with.html
+

@@ -1,0 +1,63 @@
+Ejercicio de clase XPath y Jsoup
+
+
+Xpath https://es.wikipedia.org/wiki/XPath
+
+Aplicar este ejemplo adaptando a AEMET:
+
+https://howtodoinjava.com/java/xml/java-xpath-tutorial-example/
+
+
+Ejercicio JSOUP:
+
+Se pide un programa en Java que realice las siguientes peticiones a diversas páginas para extraer información y mostrarla por consola. Solo se debe mostrar la información pedida precedida en la misma línea por un rótulo previo puesto por ti:
+
+1. Petición a https://www.aemet.es/xml/municipios_h/localidad_h_28079.xml y extraiga los siguientes datos y los muestre como en la salida más abajo:
+
+	1. El valor del orto y del ocaso para el día de la predicción.
+
+	2. La temperatura a las 15:00.
+
+	3. El viento a las 15:00.
+
+2. Petición a  https://www.aemet.es/es/eltiempo/prediccion/municipios/horas/tabla/madrid-id28079 y extraiga:
+
+	1. El número en la primera celda de clase (class) texto_azul.
+
+Salida apartado 1: (no se puede poner a mano, tienen que ser datos extraídos del xml)
+
+ORTO: 08:10
+
+	0. OCASO: 18:48
+
+		1. Temperatura a las 15:00: 17
+
+		Viento a las 15:00: 8E
+
+
+Salida apartado 2: (no se puede poner a mano, tienen que ser datos extraídos del html)
+
+Mínima: 12
+
+
+
+Referencias:
+
+https://jsoup.org/
+
+2. https://jarroba.com/scraping-java-jsoup-ejemplos/
+
+3. https://www.oracle.com/corporate/features/jsoup-html-parsing-library.html
+
+4. https://howtodoinjava.com/java/library/complete-jsoup-tutorial/
+
+5. https://www.javacodeexamples.com/jsoup-tutorial-with-examples/1628
+
+6. https://javarevisited.blogspot.com/2014/09/how-to-parse-html-file-in-java-jsoup-example.html#axzz6gdkjz6jy
+
+7. https://www.baeldung.com/java-with-jsoup
+
+8. https://www.scrapingbee.com/blog/java-parse-html-jsoup/
+
+9. Otros: https://java-source.net/open-source/html-parsers
+
