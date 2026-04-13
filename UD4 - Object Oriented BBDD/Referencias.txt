@@ -1,0 +1,25 @@
+Referencias
+Bases de datos orientadas a objetos:
+
+https://www.objectdb.com/
+
+https://www.objectdb.com/tutorial/jpa/spring
+
+https://www.objectdb.com/java/jpa/persistence/overview
+
+https://www.objectdb.com/java/jpa/persistence/overview
+
+https://www.zope.dev/
+
+https://supportservices-old.actian.com/versant/default.html
+
+http://neodatis.wikidot.com/
+
+https://matisse.com/
+
+https://matisse.com/developers/documentation/
+
+https://matisse.com/pdf/developers/java_pg.pdf
+
+https://matisse.com/pdf/developers/sql_pg.pdf
+
